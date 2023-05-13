@@ -2,9 +2,11 @@ package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entities.Game;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 // anotation que gera os getters do código de maneira mais simples
 @Getter
+@NoArgsConstructor
 // vai utilizar as infomações necessárias da classe game para o estabelicimento de regras de negócios
 public class GameMinDTO {
     private Long id;
@@ -12,9 +14,6 @@ public class GameMinDTO {
     private Integer year;
     private String imgUrl;
     private String shortDescription;
-
-    public GameMinDTO() {
-    }
 
     public GameMinDTO(Game entity) {
         this.id = entity.getId();
